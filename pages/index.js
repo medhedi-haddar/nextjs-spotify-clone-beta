@@ -16,7 +16,8 @@ export default function Home({providers}) {
       getTopPlaylists()
     }
   }, [session?.user])
-  console.log(providers)
+  console.log('providers',providers)
+  console.log('process.env.NEXT_PUBLIC_CLIENT_ID',process.env.NEXT_PUBLIC_CLIENT_ID)
   return (
     <>
       {
