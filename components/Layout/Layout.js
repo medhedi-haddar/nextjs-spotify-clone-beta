@@ -16,7 +16,7 @@ import Sidebar from './Sidebar';
 const Layout = ({children})=> {
 
   const providers = children?.props?.providers;
-
+  console.log('children?.props',children?.props)
   const router = useRouter();
 
   function storePathValues() {

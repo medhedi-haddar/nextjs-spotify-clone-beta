@@ -8,7 +8,7 @@ import { getProviders, signIn } from "next-auth/react"
 import NoLogged from '../components/NoLogged';
 import { getTopPlaylists } from '../api/api';
 
-export default function Home() {
+export default function Home({providers}) {
 
   const { data: session } = useSession();
   useEffect(() => {
@@ -16,6 +16,7 @@ export default function Home() {
       getTopPlaylists()
     }
   }, [session?.user])
+  console.log(providers)
   return (
     <>
       {
