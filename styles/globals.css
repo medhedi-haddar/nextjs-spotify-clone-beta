@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    .button{
+        @apply h-6 w-6 cursor-pointer hover:scale-125 transition transform duration-100 ease-out
+    }
+    .button-sm{
+        @apply h-6 w-6 cursor-pointer 
+    }
+    .button-2{
+       @apply h-8 w-8
+    }
+    .button-play{   
+        @apply h-5 w-5 cursor-pointer hover:scale-110 transition transform duration-75 ease-out
+    }
+}
+
+.PlayerRSWP{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height : 0px;
+    min-height: 0px !important;
+    cursor: pointer;
+    background : rgb(85 85 85) !important;
+}
+._ContentRSWP{
+    position: absolute;
+    top: -100px;
+    
+    /* display: none !important; */
+}
+
+.MuiSlider-rail{
+    background-color: #bdbdbd !important;
+}
+.MuiSlider-track{
+    background-color: #1cb854 !important;
+}
+.MuiSlider-thumb{
+    background-color: #cccccc !important;
+}
+
+.play-opacity-handler:hover > .play-opacity-depended{
+    opacity : 1
+}
+.play2-opacity-position-depended{
+    opacity : 0;
+    right: 28px;
+    top: 137px;
+}
+
+.play2-opacity-position-handler:hover > .play2-opacity-position-depended{
+    opacity : 1;
+    top: 127px;
+}
+#nprogress .bar {
+    background: rgb(28, 185, 84) !important;
+}
+.context,.track,.shuffle{
+    color :rgb(28, 185, 84);
+}
+.shuffle::after,
+.context::after,
+.track::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: #1eb753;
+    position: absolute;
+    z-index: 10;
+    bottom: -6px;
+    border-radius: 50%;
+    left: auto;
+    right: auto;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+    left: calc(50% - 2.5px);
+    margin: 0 auto;
+    margin-right: 0;
+    margin-left: 0;
+}
+.track::before{
+    content: "1";
+    font-size: 9px;
+    color: black;
+    width: 10px;
+    height: 9px;
+    background: #1eb753;
+    position: absolute;
+    z-index: 10;
+    padding: 0;
+    top: 2px;
+    border-radius: 50%;
+    right: auto;
+
+    right: 2px;
+    line-height: 9px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+}
