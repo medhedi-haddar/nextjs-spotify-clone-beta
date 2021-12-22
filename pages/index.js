@@ -42,12 +42,13 @@ export default function Home({providers}) {
   )
 }
 
-export async function getServerSideProps(){
-
+export async function getServerSideProps(context){
+  const session = await getSession(context);
   const providers = await getProviders();
   return {
     props : {
-      providers
+      providers,
+      session
     }
   }
 }
