@@ -66,7 +66,7 @@ function  Sidebar() {
                     <PlusSmIcon className="h-5 w-5   bg-zinc-300"/>
                     <p>Créer une playlist</p>
                 </button>
-                <Link href='/mysavedtracks' passHref >
+                <Link href='/' passHref >
                 <button className="flex items-center text-zinc-600 space-x-2 hover:text-white  ">
                     <HeartIcon className="h-5 w-5 p-1 bg-gradient-to-tl from-green-300 to-purple-400 hover:text-zinc-700 "/>
                     <p className="text-zinc-500">Titre likés </p>
