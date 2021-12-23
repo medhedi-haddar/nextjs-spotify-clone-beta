@@ -41,7 +41,7 @@ function Header({providers}) {
 
          providers ? Object.values(providers).map((provider) => (
          
-          <div className={`sticky flex justify-end items-center top-0 right-0 px-5 py-3 z-30 w-[100%] bg-zinc-900`} >
+          <div key={provider.name} className={`sticky flex justify-end items-center top-0 right-0 px-5 py-3 z-30 w-[100%] bg-zinc-900`} >
 
               <div  onClick={() => signIn(provider.id, { callbackUrl : "/"})} type="button" 
               className="flex relative width-w-screen items-center spaces-x-3 bg-white  hover:opacity-80 cursor-pointer rounded-full px-4 py-2"
