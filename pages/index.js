@@ -8,7 +8,7 @@ import { getProviders, signIn } from "next-auth/react"
 import NoLogged from '../components/NoLogged';
 import { getTopPlaylists } from '../api/api';
 
-export default function Home({providers}) {
+export default function Home({providers,session}) {
 
   // const { data: session } = useSession();
   // useEffect(() => {
@@ -24,19 +24,20 @@ export default function Home({providers}) {
   return (
     <>
       {
-        // (session?.user) ? <HomePage />
-        // : 
-        Object.values(providers).map((provider) => (
+        (session?.user) ? <HomePage />
+        : 
+          <NoLogged/>
+        // providers && Object.values(providers).map((provider) => (
          
-          <div key={provider.name} className={` flex justify-end items-center top-0 right-0 px-5 py-3 z-30 w-[100%] bg-zinc-900`} >
+        //   <div key={provider.name} className={` flex justify-end items-center top-0 right-0 px-5 py-3 z-30 w-[100%] bg-zinc-900`} >
 
-              <div  onClick={() => signIn(provider.id, { callbackUrl : "/"})} type="button" 
-              className="flex relative width-w-screen items-center spaces-x-3 bg-white  hover:opacity-80 cursor-pointer rounded-full px-4 py-2"
-              id="menu-button" aria-expanded="true" aria-haspopup="true" >
-                  Connexion   
-              </div>
-          </div>
-        ))
+        //       <div  onClick={() => signIn(provider.id, { callbackUrl : "/"})} type="button" 
+        //       className="flex relative width-w-screen items-center spaces-x-3 bg-white  hover:opacity-80 cursor-pointer rounded-full px-4 py-2"
+        //       id="menu-button" aria-expanded="true" aria-haspopup="true" >
+        //           Connexion   
+        //       </div>
+        //   </div>
+        // ))
       }
     </>
   )

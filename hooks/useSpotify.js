@@ -12,7 +12,6 @@ function useSpotify() {
         if(session){
             if(session.error === "RefreshAccessTokenError"){
                 signIn();
-                // signOut();
             }
         }
         spotifyApi.setAccessToken(session?.user.accessToken);

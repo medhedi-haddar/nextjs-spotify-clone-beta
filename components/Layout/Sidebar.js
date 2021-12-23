@@ -78,8 +78,8 @@ function  Sidebar() {
                 </button>
                 <hr className="border-t-[0.1px] border-zinc-900"/>
                 {playLists && playLists.map((playlist)=> (
-                    <Link href={`/playlist/${playlist.id}`} passHref > 
-                        <div key={playlist.id} onClick={()=> setPlaylistId(playlist.id)} className={` flex items-center justify-between cursor-pointer hover:text-white ${id === playlist.id ? 'text-white' : '' }`}>
+                    <Link href={`/playlist/${playlist.id}`} passHref  key={playlist.id}> 
+                        <div  onClick={()=> setPlaylistId(playlist.id)} className={` flex items-center justify-between cursor-pointer hover:text-white ${id === playlist.id ? 'text-white' : '' }`}>
                             {playlist.name} 
                             {currentPlaylist?.id === playlist.id ? <FiVolume2/> : ''}
                         </div>
