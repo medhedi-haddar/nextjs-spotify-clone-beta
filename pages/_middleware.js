@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 
 export async function middleware(req) {
 
-    const token = await getToken({ req, secret : process.env.JWT_SECRET });
+    const token = await getToken({ req, secret : process.env.JWT_SECRET || 'test@2021' });
     // if token exist allow the following 
     const { pathname } = req.nextUrl;
 

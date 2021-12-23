@@ -16,11 +16,13 @@ export default function Home({providers,session}) {
   //     getTopPlaylists()
   //   }
   // }, [session?.user])
+  const spotifyApi = useSpotify();
+  console.log(spotifyApi)
   console.log('providers',providers)
-  console.log('process.env.NEXTAUTH_URL',process.env.NEXTAUTH_URL)
-  console.log('process.env.NEXT_PUBLIC_CLIENT_SECRET',process.env.NEXT_PUBLIC_CLIENT_SECRET)
-  console.log('process.env.NEXT_PUBLIC_CLIENT_ID',process.env.NEXT_PUBLIC_CLIENT_ID)
-  console.log('process.env.JWT_SECRET',process.env.JWT_SECRET)
+  // console.log('process.env.NEXTAUTH_URL',process.env.NEXTAUTH_URL)
+  // console.log('process.env.NEXT_PUBLIC_CLIENT_SECRET',process.env.NEXT_PUBLIC_CLIENT_SECRET)
+  // console.log('process.env.NEXT_PUBLIC_CLIENT_ID',process.env.NEXT_PUBLIC_CLIENT_ID)
+  // console.log('process.env.JWT_SECRET',process.env.NEXT_PUBLIC_JWT_SECRET)
   return (
     <>
       {
