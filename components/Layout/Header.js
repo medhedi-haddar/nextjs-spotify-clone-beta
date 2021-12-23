@@ -37,7 +37,7 @@ function Header({providers}) {
 
     return (
         <>
-        {!session && 
+        {
 
          providers ? Object.values(providers).map((provider) => (
          
